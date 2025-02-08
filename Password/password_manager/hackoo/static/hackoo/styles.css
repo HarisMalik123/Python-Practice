@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #adadad;
+}
+
+form .txt_field {
+    position: relative;
+    margin: 30px 0;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #adadad;
+    transition: border-bottom 0.3s;
+}
+
+.txt_field input:focus {
+    border-bottom: 2px solid blue;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: #adadad;
+    transform: translateY(-50%);
+    transition: top 0.3s, font-size 0.3s, color 0.3s;
+}
+
+.txt_field input:focus~label,
+.txt_field input:valid~label {
+    top: -5px;
+    font-size: 12px;
+    color: blue;
+}
+
+.pass {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.signup_link {
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

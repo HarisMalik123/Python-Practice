@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Password_Manager</title>
+    <link rel="stylesheet" href="{% static 'hackoo/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Password_Manager - Login</h1>
+        <form id="loginForm" method="post" action="{%url 'login_submit'%}">
+            {% csrf_token %}
+            <h2>Login</h2>
+            <div class="txt_field">
+                <input type="text" name="username" required>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" name="password" required>
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Not a member?<a href="{% url 'signup' %}">Signup</a>
+            </div>
+        </form>   
+    </div>
+</body>
+</html>
